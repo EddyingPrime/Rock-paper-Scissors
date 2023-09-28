@@ -34,16 +34,14 @@ function win(player, computer) {
   result_div.innerHTML = player + " Beats " + computer;
 }
 
-function lose() {
+function lose(player, computer) {
   computerScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
   result_div.innerHTML = computer + " Beats " + player;
 }
 
-function draw() {
-  userScore_span.innerHTML = userScore;
-  computerScore_span.innerHTML = computerScore;
+function draw(player, computer) {
   result_div.innerHTML = "Draw";
 }
 function game(userpicked) {
