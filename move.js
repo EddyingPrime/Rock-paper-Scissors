@@ -35,11 +35,16 @@ function win(player, computer) {
 }
 
 function lose() {
-  console.log("lose");
+  computerScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_div.innerHTML = computer + " Beats " + player;
 }
 
 function draw() {
-  console.log("draw");
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_div.innerHTML = "Draw";
 }
 function game(userpicked) {
   play_div.addEventListener("click", function () {
