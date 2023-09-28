@@ -41,7 +41,6 @@ function lose() {
 function draw() {
   console.log("draw");
 }
-
 function game(userpicked) {
   play_div.addEventListener("click", function () {
     const computer = computerpicked();
@@ -67,21 +66,19 @@ function game(userpicked) {
   });
 }
 
-console.log(game);
-
-game("");
+// game("");
 
 function main() {
   rock_btn.addEventListener("click", function () {
-    game("Rock");
+    console.log((userpicked = "Rock"));
   });
 
   paper_btn.addEventListener("click", function () {
-    game("Paper");
+    console.log((userpicked = "Paper"));
   });
 
   scissors_btn.addEventListener("click", function () {
-    game("Scissors");
+    console.log((userpicked = "Scissor"));
   });
 }
 
