@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock.paper.scissors</title>
+  </head>
+  <body>
+    <div class="LoginInterface">
+      <div class="loginform">
+        <input type="text" id="userName" />
+        <button id="login" onclick="buttonClicked()">Login</button>
+      </div>
+    </div>
+    <div id="gameInterface" class="gameInterface" style="display: none">
+      <div id="gameboard" class="gameboard">
+        <div id="gamescore" class="gamescore">
+          <div id="userinput"></div>
+          <span class="input" id="player-score">0</span>
+          <div>Computer</div>
+          <span class="input" id="computer-score">0</span>
+          <div>Tie</div>
+          <span class="input" id="tie">0</span>
+        </div>
+        <div class="result"></div>
+        <div id="gamebuttons">
+          <button class="gamebutton" id="rock">Rock</button>
+          <button class="gamebutton" id="paper">paper</button>
+          <button class="gamebutton" id="scissors">scissors</button>
+        </div>
+        <div id="playbutton">
+          <button id="play">play</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="move.js"></script>
+</html>
