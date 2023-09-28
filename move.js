@@ -31,21 +31,24 @@ function win(player, computer) {
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_div.innerHTML = player + " Beats " + computer;
+  result_div.innerHTML = player + " Beats " + computer + " You Win! ";
 }
 
 function lose(player, computer) {
   computerScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_div.innerHTML = computer + " Beats " + player;
+  result_div.innerHTML = computer + " Beats " + player + " You Lose! ";
 }
 
 function draw(player, computer) {
-  result_div.innerHTML = "Draw";
+  tieScore_span++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_div.innerHTML = " Draw!";
 }
 function game(userpicked) {
-  play_div.addEventListener("click", function () {
+  play_div.addEventListener("click", function game() {
     const computer = computerpicked();
     switch (userpicked + computer) {
       case "RockScissors":
@@ -63,26 +66,31 @@ function game(userpicked) {
       case "RockRock":
       case "PaperPaper":
       case "ScissorScissor":
-        draw(userpicked, computer);
+        draw();
         break;
     }
   });
 }
 
-// game("");
+game();
 
 function main() {
   rock_btn.addEventListener("click", function () {
-    console.log((userpicked = "Rock"));
+    console.log("Rock");
+    game("Rock");
   });
 
   paper_btn.addEventListener("click", function () {
-    console.log((userpicked = "Paper"));
+    console.log("Paper");
+    game("Paper");
   });
 
   scissors_btn.addEventListener("click", function () {
-    console.log((userpicked = "Scissor"));
+    console.log("Scissor");
+    game("Scissor");
   });
 }
+
+console.log("play");
 
 main();
