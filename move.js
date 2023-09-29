@@ -42,13 +42,14 @@ function lose(player, computer) {
 }
 
 function draw(player, computer) {
-  tieScore_span++;
+  tie++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
+  tieScore_span.innerHTML = tie;
   result_div.innerHTML = " Draw!";
 }
 function game(userpicked) {
-  play_div.addEventListener("click", function game() {
+  play_div.addEventListener("click", function () {
     const computer = computerpicked();
     switch (userpicked + computer) {
       case "RockScissors":
@@ -66,7 +67,7 @@ function game(userpicked) {
       case "RockRock":
       case "PaperPaper":
       case "ScissorScissor":
-        draw();
+        draw(userpicked, computer);
         break;
     }
   });
@@ -90,7 +91,5 @@ function main() {
     game("Scissor");
   });
 }
-
-console.log("play");
 
 main();
