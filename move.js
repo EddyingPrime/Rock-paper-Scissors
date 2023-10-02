@@ -25,8 +25,11 @@ function computerpicked() {
 let playerPicked = "";
 let computerChoice = "";
 
+const userChoiceDisplay = document.getElementById("userChoice");
+
 function choose(player) {
   playerPicked = player;
+  userChoiceDisplay.textContent = player;
 }
 
 function play() {
@@ -68,6 +71,24 @@ function draw(player) {
 }
 
 function reset() {
+  userScore = 0;
+  computerScore = 0;
+  tie = 0;
+  playerPicked = "";
+  computerChoice = "";
+
+  // Clear the HTML elements
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  tieScore_span.innerHTML = tie;
+  result_div.innerHTML = "";
+
+  //reset
+  document.querySelector(".LoginInterface").style.display = "none";
+  document.querySelector(".gameInterface").style.display = "flex";
+}
+
+function Newuser() {
   userLog.user = "";
   userScore = 0;
   computerScore = 0;

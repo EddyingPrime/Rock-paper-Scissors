@@ -76,3 +76,19 @@ body {
   justify-content: center;
   gap: 30px;
 }
+
+#userChoiceDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#rock-image {
+  height: 50px;
+}
+#paper-image {
+  height: 50px;
+}
+#scissors-image {
+  height: 50px;
+}

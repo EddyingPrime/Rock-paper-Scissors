@@ -25,30 +25,21 @@
         </div>
         <div class="result"></div>
 
+        <div id="userChoiceDisplay">
+          <span id="userChoice"></span>
+          <img id="player-choice-img" src="" alt="" />
+          <img id="computer-choice-img" src="" alt="" />
+        </div>
+
         <div id="gamebuttons">
           <button onclick="choose('Rock') " class="gamebutton">
-            <img
-              src="images/Rock-removebg-preview.png"
-              height="50px"
-              alt=""
-              id="rock"
-            />
+            <img src="images/Rock.png" alt="" id="rock-image" />
           </button>
           <button onclick="choose('Paper')" class="gamebutton">
-            <img
-              src="images/Paper-removebg-preview.png"
-              height="50px"
-              alt=""
-              id="paper"
-            />
+            <img src="images/Paper.png" alt="" id="paper-image" />
           </button>
           <button onclick="choose('Scissors')" class="gamebutton">
-            <img
-              src="images/Scissors-removebg-preview.png"
-              height="50px"
-              alt=""
-              id="scissors"
-            />
+            <img src="images/Scissors.png" alt="" id="scissors-image" />
           </button>
         </div>
         <div class="button_start">
@@ -57,6 +48,9 @@
           </div>
           <div id="resetbutton">
             <button onclick="reset()" id="Reset">reset</button>
+          </div>
+          <div id="newbutton">
+            <button onclick="Newuser()" id="Reset">New user</button>
           </div>
         </div>
       </div>
