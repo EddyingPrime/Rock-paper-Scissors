@@ -63,8 +63,6 @@ function lose(player) {
 
 function draw(player) {
   tie++;
-  userScore_span.innerHTML = userScore;
-  computerScore_span.innerHTML = computerScore;
   tieScore_span.innerHTML = tie;
   result_div.innerHTML = " Draw!";
 }
