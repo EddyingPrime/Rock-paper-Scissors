@@ -59,9 +59,20 @@ body {
   gap: 30px;
 }
 
-#playbutton {
-  padding: 50px;
+.gamebutton {
+  border: none;
+  background: none;
+}
+
+.result {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.button_start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }

@@ -10,7 +10,7 @@
     <div class="LoginInterface">
       <div class="loginform">
         <input type="text" id="userName" />
-        <button id="login" onclick="buttonClicked()">Login</button>
+        <button id="login" onclick="buttonClicked()">Username</button>
       </div>
     </div>
     <div id="gameInterface" class="gameInterface" style="display: none">
@@ -24,19 +24,40 @@
           <span class="input" id="tie">0</span>
         </div>
         <div class="result"></div>
+
         <div id="gamebuttons">
-          <button onclick="choose('Rock')" class="gamebutton" id="rock">
-            Rock
+          <button onclick="choose('Rock') " class="gamebutton">
+            <img
+              src="images/Rock-removebg-preview.png"
+              height="50px"
+              alt=""
+              id="rock"
+            />
           </button>
-          <button onclick="choose('Paper')" class="gamebutton" id="paper">
-            paper
+          <button onclick="choose('Paper')" class="gamebutton">
+            <img
+              src="images/Paper-removebg-preview.png"
+              height="50px"
+              alt=""
+              id="paper"
+            />
           </button>
-          <button onclick="choose('Scissors')" class="gamebutton" id="scissors">
-            scissors
+          <button onclick="choose('Scissors')" class="gamebutton">
+            <img
+              src="images/Scissors-removebg-preview.png"
+              height="50px"
+              alt=""
+              id="scissors"
+            />
           </button>
         </div>
-        <div id="playbutton">
-          <button onclick="play()" id="play">play</button>
+        <div class="button_start">
+          <div id="playbutton">
+            <button onclick="play()" id="play">play</button>
+          </div>
+          <div id="resetbutton">
+            <button onclick="reset()" id="Reset">reset</button>
+          </div>
         </div>
       </div>
     </div>

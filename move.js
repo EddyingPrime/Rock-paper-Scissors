@@ -66,3 +66,24 @@ function draw(player) {
   tieScore_span.innerHTML = tie;
   result_div.innerHTML = " Draw!";
 }
+
+function reset() {
+  userLog.user = "";
+  userScore = 0;
+  computerScore = 0;
+  tie = 0;
+  playerPicked = "";
+  computerChoice = "";
+
+  // Clear the HTML elements
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  tieScore_span.innerHTML = tie;
+  result_div.innerHTML = "";
+
+  // Hide the game interface and show the login interface
+  document.querySelector(".LoginInterface").style.display = "flex";
+  document.querySelector(".gameInterface").style.display = "flex";
+  document.querySelector("#userName").value = ""; // Clear the input field
+  document.querySelector("#userinput").innerHTML = "";
+}
