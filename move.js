@@ -27,69 +27,49 @@ function computerpicked() {
   return choices[randompick];
 }
 
-function win(player, computer) {
+let playerPicked = "";
+let computerChoice = "";
+
+function choose(player) {
+  playerPicked = player;
+}
+
+function play() {
+  computerChoice = computerpicked();
+  let result_choice = "";
+  if (playerPicked === computerChoice) {
+    result_choice = draw(playerPicked);
+    return;
+  }
+  if (
+    (playerPicked === "Rock" && computerChoice === "Scissors") ||
+    (playerPicked === "Paper" && computerChoice === "Rock") ||
+    (playerPicked === "Scissors" && computerChoice === "Paper")
+  ) {
+    result_choice = win(playerPicked);
+  } else {
+    result_choice = lose(playerPicked);
+  }
+}
+
+function win(player) {
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_div.innerHTML = player + " Beats " + computer + " You Win! ";
+  result_div.innerHTML = player + " Beats " + computerChoice + " You Win! ";
 }
 
-function lose(player, computer) {
+function lose(player) {
   computerScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_div.innerHTML = computer + " Beats " + player + " You Lose! ";
+  result_div.innerHTML = computerChoice + " Beats " + player + " You Lose! ";
 }
 
-function draw(player, computer) {
+function draw(player) {
   tie++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
   tieScore_span.innerHTML = tie;
   result_div.innerHTML = " Draw!";
 }
-function game(userpicked) {
-  play_div.addEventListener("click", function () {
-    const computer = computerpicked();
-    switch (userpicked + computer) {
-      case "RockScissors":
-      case "PaperRock":
-      case "ScissorsPaper":
-        win(userpicked, computer);
-
-        break;
-      case "RockPaper":
-      case "PaperScissor":
-      case "ScissorRock":
-        lose(userpicked, computer);
-
-        break;
-      case "RockRock":
-      case "PaperPaper":
-      case "ScissorScissor":
-        draw(userpicked, computer);
-        break;
-    }
-  });
-}
-
-game();
-
-function main() {
-  rock_btn.addEventListener("click", function () {
-    console.log("Rock");
-    game("Rock");
-  });
-
-  paper_btn.addEventListener("click", function () {
-    console.log("Paper");
-    game("Paper");
-  });
-
-  scissors_btn.addEventListener("click", function () {
-    console.log("Scissor");
-    game("Scissor");
-  });
-}
-
-main();
