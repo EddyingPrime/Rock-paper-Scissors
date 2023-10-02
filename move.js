@@ -5,12 +5,7 @@ let tie = 0;
 const userScore_span = document.getElementById("player-score");
 const computerScore_span = document.getElementById("computer-score");
 const tieScore_span = document.getElementById("tie");
-const gameScore_div = document.querySelector("#gamescore");
 const result_div = document.querySelector(".result");
-const rock_btn = document.getElementById("rock");
-const paper_btn = document.getElementById("paper");
-const scissors_btn = document.getElementById("scissors");
-const play_div = document.getElementById("play");
 
 function buttonClicked() {
   let user = document.querySelector("#userName").value;
