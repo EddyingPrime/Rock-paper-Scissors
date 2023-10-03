@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@600&display=swap");
 html,
 body {
   height: 100%;
   padding: 0;
   margin: 0;
+  font-family: "Pixelify Sans", cursive;
 }
 
 .LoginInterface {
@@ -16,12 +18,33 @@ body {
   border: 2px solid rgb(42, 165, 108);
   border-radius: 20px;
   background-color: white;
-  color: azure;
   height: 400px;
   width: 400px;
+  background-color: rgb(244, 244, 244);
+}
+
+.button_start button {
+  border-radius: 13px;
+}
+
+.result {
+  padding: 6px;
+}
+
+.user_user {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.login_login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  font-family: "Pixelify Sans", cursive;
+  border: none;
+  background: none;
 }
 
 .gameInterface {
@@ -46,7 +69,7 @@ body {
   align-items: top;
   justify-content: center;
   color: black;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
   padding-top: 20px;
   gap: 20px;
 }
@@ -68,13 +91,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 20px;
+}
+
+.gamescore {
+  font-size: 20px;
 }
 
 .button_start {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 36px;
 }
 
 #userChoiceDisplay {
@@ -91,4 +119,10 @@ body {
 }
 #scissors-image {
   height: 50px;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
